@@ -1,0 +1,18 @@
+
+ERRATUM
+********
+
+Minor errors are recorded here. The manuscript will be updated before submission
+for publication.
+
+page 2 (equation for approximate marginal distribution): The theta in the
+denominator should have a star.
+
+page 5 (theorem 1): should be \nabla log \pi_\mathcal{G}(y \mid \phi) on the
+LHS.
+
+Acknowledgment
+**************
+This section is to thank the readers who found errors.
+
+Sam Power.
