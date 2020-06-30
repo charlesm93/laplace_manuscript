@@ -1,5 +1,6 @@
 
 # Analyze Stan fit object generated on the cluster
+# The here presented code is
 
 rm(list = ls())
 gc()
