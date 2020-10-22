@@ -68,6 +68,6 @@ All the Stan files are in the `model3` directory.
 
 `cluster_analysis.r` contains the code to plot and compare the samples, and other metrics of interest, for the GLM with a horseshoe prior. The code reads in the StanFit objects saved when using `bernoulli_logit.r`. Next, `cluster_analysis_v2.r` is an improved version; as written the code applies to saved fits for the SKIM, but can be adjusted for other models.
 
-`error_analysis.r` contains code to compute and plot the error for all three models. To do the error analysis, you need to generate benchmarks. In the paper, these benchmarks are generated using long runs of MCMC. There are practical difficulties when reading the benchmark for the GLM, since we have ~12,000 parameters over 98,000 samples. To avoid memory overflow in R, the benchmarks are created separately, using `read_cmdstan_output.r`.
+`error_analysis.r` contains code to compute and plot the squared error for all three models fitted with full HMC and the embedded Laplace approximation. The StanFit objects for each algorithm can be created with `bernouilli_logit.r`. To do the error analysis, you need to generate benchmarks. In the paper, we create these benchmarks using long runs of full HMC. There are practical difficulties when reading the benchmark for the GLM, since we have ~12,000 parameters over 98,000 samples. To avoid memory overflow in R, the benchmarks are created separately, using `read_cmdstan_output.r`.
 
 Finally, the analysis for ADVI on all three models is in `advi_sample.r`.
