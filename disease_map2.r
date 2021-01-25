@@ -74,7 +74,7 @@ nChains <- 4
 num_cores <- min(nChains, detectCores())
 
 fit <- mod$sample(
-  data = data, num_chains = nChains, num_cores = num_cores,
+  data = data, chains = nChains, parallel_chains = num_cores,
   num_warmup = 500, num_samples = 500, seed = 123,
   adapt_delta = 0.8)
 stanfit <- read_stan_csv(fit$output_files())
